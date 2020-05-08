@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Cliente | minhaOficina</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="css/default-header.css">
+
+    <script src="https://kit.fontawesome.com/69e2b2839c.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <header id="header">
+        <span id="header-title"><a href="index.html"><i class="fas fa-arrow-circle-left"></i></a> <i
+                class="fas fa-car"></i> &nbsp;<span class="thin">minha</span>Oficina</span>
+    </header>
+
+
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="twelve columns">
+                    <h1>Cadastro de Cliente</h1>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="twelve columns">
+                    <h2>Dados Pessoais</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="six columns">
+                    <label>Nome:</label>
+                    <input type="text" id="nomeInput" autofocus>
+                </div>
+                <div class="three columns">
+                    <label>CPF:</label>
+                    <input type="text" id="cpfInput" placeholder="somente números">
+                </div>
+                <div class="three columns">
+                    <label>RG:</label>
+                    <input type="text" id="rgInput" placeholder="somente números">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="three columns">
+                    <label>Nascimento:</label>
+                    <input type="text" id="dataNascimentoInput" placeholder="DD/MM/AAAA">
+                </div>
+                <div class="three columns">
+                    <label>Sexo:</label>
+                    <select id="sexoInput">
+                        <option>MASCULINO</option>
+                        <option>FEMININO</option>
+                    </select>
+                </div>
+                <div class="six columns">
+                    <label>E-mail:</label>
+                    <input type="text" id="emailInput">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="three columns">
+                    <label>CEP:</label>
+                    <input type="text" placeholder="somente números" id="cepInput">
+                </div>
+                <div class="seven columns">
+                    <label>Logradouro:</label>
+                    <input type="text" id="logradouroInput" disabled>
+                </div>
+                <div class="two columns">
+                    <label>Número:</label>
+                    <input type="text" id="numeroInput">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="three columns">
+                    <label>Bairro:</label>
+                    <input type="text" id="bairroInput" disabled>
+                </div>
+                <div class="three columns">
+                    <label>Cidade:</label>
+                    <input type="text" id="cidadeInput" disabled>
+                </div>
+                <div class="three columns">
+                    <label>Estado:</label>
+                    <input type="text" id="estadoInput" disabled>
+                </div>
+                <div class="three columns">
+                    <label>Complemento:</label>
+                    <input type="text" id="complementoInput">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="six columns">
+                    <label>Celular:</label>
+                    <input type="text" id="celularInput" placeholder="DDD + somente números">
+                </div>
+                <div class="six columns">
+                    <label>Telefone:</label>
+                    <input type="text" id="telefoneInput" placeholder="DDD + somente números">
+                </div>
+            </div>
+
+
+            <hr>
+            <div class="row">
+                <div class="twelve columns">
+                    <h2>Dados do Veículo</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="two columns">
+                    <label>Fabricante:</label>
+                    <input type="text" id="fabricanteInput">
+                </div>
+                <div class="four columns">
+                    <label>Modelo:</label>
+                    <input type="text" id="modeloInput">
+                </div>
+                <div class="two columns">
+                    <label>Ano fabr.:</label>
+                    <input type="text" id="anoFabricacaoInput">
+                </div>
+                <div class="two columns">
+                    <label>Ano mod.:</label>
+                    <input type="text" id="anoModeloInput">
+                </div>
+                <div class="two columns">
+                    <label>Motor:</label>
+                    <input type="text" id="motorInput">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="two columns">
+                    <label>Placa:</label>
+                    <input type="text" placeholder="XXX0000" id="placaInput">
+                </div>
+                <div class="three columns">
+                    <label>Quilometragem:</label>
+                    <input class="with-complement" type="text" id="quilometragemInput">
+                </div>
+            </div>
+
+            <hr>
+            <div class="container" id="submit-area">
+                <div class="row">
+                    <input type="submit" value="Cadastrar" class="button-primary">
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+<script src="js/autocompleta-cep.js"></script>
+
+</html>

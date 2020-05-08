@@ -1,0 +1,29 @@
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.option {
+    margin: 20px 30px;
+    background-color: #1b113b;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+}
+ 
+.option:hover {
+    background-color: #2d1f5c;
+}
+
+.option-icon {
+    font-size: 28px;
+}
+
+.option-text {
+    position: relative;
+    top: 10px;
+}
