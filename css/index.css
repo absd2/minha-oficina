@@ -1,3 +1,30 @@
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard .item {
+    width: fit-content;
+    margin: 10px 30px;
+    width: fit-content;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 180px;
+    max-height: 180px;
+    padding: 10px;
+    border-radius: 15px;
+    justify-content: center;
+}
+
+.dashboard .item .highlighted-info {
+    font-size: 42px;
+    font-family: sans-serif;
+}
+
+
 .options {
     display: flex;
     flex-wrap: wrap;
@@ -11,8 +38,11 @@
     color: white;
     text-align: center;
     width: fit-content;
+    min-width: 180px;
+    max-width: 180px;
     padding: 20px;
     border-radius: 10px;
+    height: fit-content;
 }
  
 .option:hover {

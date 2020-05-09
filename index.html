@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Início | minhaOficina</title>
 
     <link rel="shortcut icon" href="img/favicon.ico">
@@ -10,39 +11,69 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/default-header.css">
 
     <script src="https://kit.fontawesome.com/69e2b2839c.js" crossorigin="anonymous"></script>
 </head>
 
 
 <body>
-    <header id="header">
+    <header id="main-header">
         <span id="header-title"> <i class="fas fa-car"></i> &nbsp;<span class="thin">minha</span>Oficina</span>
     </header>
 
     <div class="container">
-        <h1>Início</h1>
+        <div class="row">
+            <div class="twelve columns">
+                <h1>Visão Geral</h1>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard container">
+        <div class="item">
+            <span class="highlighted-info">12</span><br>
+            <span class="thin">ordens de serviço abertas</span>
+        </div>
+
+        <div class="item">
+            <span class="highlighted-info danger">2</span><br>
+            <span class="thin">clientes em atraso</span>
+        </div>
+
+        <div class="item">
+            <span class="highlighted-info">58</span><br>
+            <span class="thin">carros entregues na última semana</span>
+        </div>
     </div>
 
     <div class="options container">
-        <a href="#">
+        <a href="consulta.html">
             <div class="option">
                 <i class="fas fa-search option-icon"></i><br>
-                <span class="option-text">Consulta de Clientes</span>
+                <span class="option-text">Consultar</span>
             </div>
         </a>
+    </div>
 
+    <div class="options container">
         <a href="cadastro.html">
             <div class="option">
                 <i class="fas fa-user-plus option-icon"></i><br>
                 <span class="option-text">Cadastro de Cliente</span>
             </div>
         </a>
+
+        <a href="#">
+            <div class="option">
+                <i class="fas fa-plus-circle option-icon"></i><br>
+                <span class="option-text">Iniciar Serviço</span>
+            </div>
+        </a>
     </div>
 
 </body>
-<script src="js/autocompleta-cep.js"></script>
 
 </html>

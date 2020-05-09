@@ -29,8 +29,7 @@ select {
 p {
     float: none;
     font-size: 14px;
-    font-weight: 600;
-    color: #a11212;
+    font-weight: 500;
     position: relative;
     top: 10px;
     display: none;

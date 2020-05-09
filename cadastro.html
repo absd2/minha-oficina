@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro de Cliente | minhaOficina</title>
 
     <link rel="shortcut icon" href="img/favicon.ico">
@@ -10,8 +11,8 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/skeleton.css">
-    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
-    <link rel="stylesheet" type="text/css" href="css/default-header.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro-consulta.css">
 
     <script src="https://kit.fontawesome.com/69e2b2839c.js" crossorigin="anonymous"></script>
 </head>
@@ -19,13 +20,12 @@
 
 <body>
     <header id="header">
-        <span id="header-title"><a href="index.html"><i class="fas fa-arrow-circle-left"></i></a> <i
-                class="fas fa-car"></i> &nbsp;<span class="thin">minha</span>Oficina</span>
+        <span id="header-title"><a href="index.html"><i class="fas fa-arrow-circle-left"></i></a> <i class="fas fa-car"></i> &nbsp;<span class="thin">minha</span>Oficina</span>
     </header>
 
 
     <div class="container">
-        <form>
+        <form id="form">
             <div class="row">
                 <div class="twelve columns">
                     <h1>Cadastro de Cliente</h1>
@@ -46,24 +46,24 @@
                 </div>
                 <div class="three columns">
                     <label>CPF:</label>
-                    <input type="text" id="cpfInput" placeholder="somente números">
+                    <input maxlength="11" type="text" id="cpfInput" placeholder="somente números">
                 </div>
                 <div class="three columns">
                     <label>RG:</label>
-                    <input type="text" id="rgInput" placeholder="somente números">
+                    <input maxlength="7" type="text" id="rgInput" placeholder="somente números">
                 </div>
             </div>
 
             <div class="row">
                 <div class="three columns">
                     <label>Nascimento:</label>
-                    <input type="text" id="dataNascimentoInput" placeholder="DD/MM/AAAA">
+                    <input maxlength="10" type="text" id="dataNascimentoInput" placeholder="DD/MM/AAAA">
                 </div>
                 <div class="three columns">
                     <label>Sexo:</label>
                     <select id="sexoInput">
-                        <option>MASCULINO</option>
-                        <option>FEMININO</option>
+                        <option value="M">MASCULINO</option>
+                        <option value="F">FEMININO</option>
                     </select>
                 </div>
                 <div class="six columns">
@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="three columns">
                     <label>CEP:</label>
-                    <input type="text" placeholder="somente números" id="cepInput">
+                    <input maxlength="8" type="text" placeholder="somente números" id="cepInput">
                 </div>
                 <div class="seven columns">
                     <label>Logradouro:</label>
@@ -109,11 +109,11 @@
             <div class="row">
                 <div class="six columns">
                     <label>Celular:</label>
-                    <input type="text" id="celularInput" placeholder="DDD + somente números">
+                    <input maxlength="11" type="text" id="celularInput" placeholder="DDD + somente números">
                 </div>
                 <div class="six columns">
                     <label>Telefone:</label>
-                    <input type="text" id="telefoneInput" placeholder="DDD + somente números">
+                    <input maxlength="10" type="text" id="telefoneInput" placeholder="DDD + somente números">
                 </div>
             </div>
 
@@ -136,11 +136,11 @@
                 </div>
                 <div class="two columns">
                     <label>Ano fabr.:</label>
-                    <input type="text" id="anoFabricacaoInput">
+                    <input maxlength="4" type="text" id="anoFabricacaoInput">
                 </div>
                 <div class="two columns">
                     <label>Ano mod.:</label>
-                    <input type="text" id="anoModeloInput">
+                    <input maxlength="4" type="text" id="anoModeloInput">
                 </div>
                 <div class="two columns">
                     <label>Motor:</label>
@@ -151,11 +151,11 @@
             <div class="row">
                 <div class="two columns">
                     <label>Placa:</label>
-                    <input type="text" placeholder="XXX0000" id="placaInput">
+                    <input maxlength="7" type="text" placeholder="XXX0000" id="placaInput">
                 </div>
                 <div class="three columns">
                     <label>Quilometragem:</label>
-                    <input class="with-complement" type="text" id="quilometragemInput">
+                    <input maxlength="6" type="text" id="quilometragemInput">
                 </div>
             </div>
 
@@ -165,10 +165,14 @@
                     <input type="submit" value="Cadastrar" class="button-primary">
                 </div>
             </div>
-
+            <div class="row">
+                <p class="danger">Os campos em vermelho não foram preenchidos ou apresentam caracteres inválidos.</p>
+            </div>
         </form>
     </div>
 </body>
 <script src="js/autocompleta-cep.js"></script>
+<script src="js/ongoing-validation.js"></script>
+<script src="js/cadastro.js"></script>
 
 </html>
