@@ -72,6 +72,10 @@ a {
     font-weight: 300;
 }
 
+.subtext {
+    color: #696969;
+}
+
 .danger {
     color: #c01919;
     font-size: 14px;
@@ -100,6 +104,14 @@ input[type='submit']:disabled:hover {
     background-color: #b4b4b4;
     color: #5e5e5e;
     border: 1px solid #d1d1d1;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    font-family: sans-serif;
+    min-height: 210px;
+    height: 100%;
 }
 
 .container table {

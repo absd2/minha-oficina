@@ -30,7 +30,7 @@ p {
     float: none;
     position: relative;
     top: 10px;
-    display: none;
+    visibility: visible;
 }
 
 td {

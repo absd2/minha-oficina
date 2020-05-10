@@ -37,7 +37,7 @@ app.post('/consulta', (req, res) => {
         // Gets client name by having CPF.
         case 'nomePorCPF':
             // Mounts query.
-            var query = 'SELECT nome FROM clientes WHERE cpf = \'' + req.cpf + '\'';
+            var query = 'SELECT * FROM clientes WHERE cpf = \'' + req.cpf + '\'';
             db.query(query, (err, results, fields) => {
                 
                 if (err !== null) { // if got an error.
@@ -47,7 +47,8 @@ app.post('/consulta', (req, res) => {
                 }else if (results.length > 0) { //query ok and found something.
                     response = {
                         status: 200,
-                        nome: results[0].nome
+                        nome: results[0].nome,
+                        idCliente: results[0].idCliente
                     }
                     res.send(JSON.stringify(response));
 
@@ -81,7 +82,8 @@ app.post('/consulta', (req, res) => {
                         modelo: results[0].modelo,
                         anoFabricacao: results[0].anoFabricacao,
                         anoModelo: results[0].anoModelo,
-                        motor: results[0].motor
+                        motor: results[0].motor,
+                        idVeiculo: results[0].idVeiculo
                     }
                     res.send(JSON.stringify(response));
                 
@@ -152,8 +154,8 @@ app.post('/consulta', (req, res) => {
 });
 
 
-app.post('/cadastro', (req, res) => {
-    console.log('[/cadastro] POST request received...');
+app.post('/cadastro/cliente', (req, res) => {
+    console.log('[/cadastro/cliente] POST request received...');
     req = req.body;
 
     // Mounting costumer query.
@@ -204,4 +206,35 @@ app.post('/cadastro', (req, res) => {
             });
         }
     });
+});
+
+app.post('/cadastro/os', (req, res) => {
+    console.log('[/cadastro/os] POST request received...');
+    req = req.body;
+
+    // Mounting service order query.
+    var query = 'INSERT INTO ordensServico(idOS, idCliente, idVeiculo, valor, descricao, dataInicio, dataEntrega) VALUES(default, ';
+    var count = 0;
+    for (let i in req) {
+        if (count < 7) {
+            query += '\'' + req[i] + '\', ';
+        }
+        count++;
+    }
+    query = query.slice(0, query.length - 2);
+    query += ')';
+
+    db.query(query, (err, results, fields) => {
+        if(err !== null) {
+            console.log('Couldn\'t create service order.');
+        }else{
+            console.log('Service order created successfully.');
+            response = {
+                status: 200
+            }
+
+            res.send(JSON.stringify(response));
+        }
+    });
+
 });

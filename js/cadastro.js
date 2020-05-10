@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-const SERVER_URL = 'http://localhost:8080/cadastro';
+const SERVER_URL = 'http://localhost:8080/cadastro/cliente';
 
 form.addEventListener("submit", e => {
     e.preventDefault();

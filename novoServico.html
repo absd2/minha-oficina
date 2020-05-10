@@ -70,8 +70,41 @@
                     <span class="danger" id="placa-not-found-alert">Veículo não encontrado na base de dados.</span>
                 </div>
             </div>
+
+            <hr>
+            <div class="row">
+                <div class="twelve columns">
+                    <h2>Serviço</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="six columns">
+                    <label>Descrição do Serviço</label>
+                    <textarea id="descricaoServicoInput" maxlength="255"></textarea>
+                </div>
+
+                <div class="six columns">
+                    <label>Início:</label>
+                    <input type="text" id="dataInicioInput" maxlength="10" placeholder="DD/MM/AAAA">                
+
+                    <label>Entrega:</label>
+                    <input type="text" id="dataEntregaInput" maxlength="10" placeholder="DD/MM/AAAA">                
+
+                    <label>Valor <span class="thin">(R$)</span>:</label>
+                    <input type="text" id="valorInput" maxlength="10">                
+                </div>
+            </div>
+
+            <div class="container" id="submit-area">
+                <div class="row">
+                    <input type="submit" id="submitBtn" value="Abrir ordem" class="button-primary" disabled>
+                </div>
+            </div>
+            
         </form>
     </div>
 </body>
 <script src="js/novoServico_busca-nome-placa.js"></script>
+<script src="js/novoServico.js"></script>
 </html>

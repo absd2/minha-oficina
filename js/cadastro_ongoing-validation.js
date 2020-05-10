@@ -34,12 +34,12 @@ for(let i of allInputs) {
         }
 
         // Updates submit button if all inputs were filled and there's no invalid filled input.
-        if(invalidInputs>0) {
-            submitButton.disabled = true;
-            alertText.style.display = 'block';
-        }else if(filledInputs===18){
+        if(invalidInputs<=0 && filledInputs===17) {
             submitButton.disabled = false;
-            alertText.style.display = 'none';
+            alertText.style.visibility = 'hidden';
+        }else{
+            submitButton.disabled = true;
+            alertText.style.visibility = 'visible';
         }
     });
 }

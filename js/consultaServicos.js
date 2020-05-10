@@ -38,7 +38,11 @@ formElement.addEventListener('submit', e => {
     }).then(response => {
         return response.json();
     }).then(responseData => {
-        addRow(tableElement, responseData);
+        if(responseData.status !==404) {
+            addRow(tableElement, responseData);
+        }else{
+            addRow(tableElement, [['<i class=\'thin subtext\'>-</i>', '<i class=\'thin subtext\'>nada consta</i>', '<i class=\'thin subtext\'>-</i>']]);
+        }
     });
 });
 
