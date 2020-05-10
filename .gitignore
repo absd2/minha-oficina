@@ -30,4 +30,4 @@
 
 # End of https://www.gitignore.io/api/linux,visualstudiocode
 
-.server/node-modules
+server/node-modules/*
