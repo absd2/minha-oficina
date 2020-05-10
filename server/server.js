@@ -61,7 +61,7 @@ app.post('/consulta', (req, res) => {
                     res.send(JSON.stringify(response));
                 }
             });
-            break;
+        break;
 
 
         // Gets vehicle data by having car plate.
@@ -93,7 +93,7 @@ app.post('/consulta', (req, res) => {
                     res.send(JSON.stringify(response));
                 }
             });
-            break;
+        break;
 
 
         // Gets service order by having CPF.
@@ -121,7 +121,32 @@ app.post('/consulta', (req, res) => {
                     res.send(JSON.stringify(response));
                 }
             });
-            break;
+        break;
+
+
+
+        case 'osPorID':
+            // Mounts query.
+            var query = 'SELECT * FROM ordensServico WHERE idOS = \'' + req.valor + '\'';
+            db.query(query, (err, results, fields) => {
+                
+                if (err !== null) { // if got an error.
+                    console.log('Couldn\'t search for service order by ID.');
+                
+                
+                } else if (results.length > 0) { // query ok and found something.
+                    let response = [[results[0].idOS, results[0].descricao, 'R$'+ results[0].valor]];
+                    res.send(JSON.stringify(response));
+                
+                
+                } else { // query ok but have found nothing.
+                    response = {
+                        status: 404
+                    }
+                    res.send(JSON.stringify(response));
+                }
+            });
+        break;
     }
 
 });
