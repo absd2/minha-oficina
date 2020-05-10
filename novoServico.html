@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novo Serviço  |  minhaOficina</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro-consulta.css">
+
+    <script src="https://kit.fontawesome.com/69e2b2839c.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <header id="header">
+        <span id="header-title"><a href="index.html"><i class="fas fa-arrow-circle-left"></i></a> <i
+                class="fas fa-car"></i> &nbsp;<span class="thin">minha</span>Oficina</span>
+    </header>
+
+
+    <div class="container">
+        <form id="form">
+            <div class="row">
+                <div class="twelve columns">
+                    <h1>Novo Serviço</h1>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="twelve columns">
+                    <h2>Identificação do Cliente</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="four columns">
+                    <label>CPF:</label>
+                    <input type="text" id="cpfInput" autofocus maxlength="11">
+                </div>
+                <div class="eight columns">
+                    <label>Nome:</label>
+                    <input type="text" id="nomeInput" disabled>
+                    <span class="danger" id="cpf-not-found-alert">CPF não encontrado na base de dados.</span>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="twelve columns">
+                    <h2>Identificação do Veículo</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="four columns">
+                    <label>Placa:</label>
+                    <input type="text" id="placaInput" autofocus>
+                </div>
+                <div class="eight columns">
+                    <label>Veículo:</label>
+                    <input type="text" id="veiculoInput" disabled>
+                    <span class="danger" id="placa-not-found-alert">Veículo não encontrado na base de dados.</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="js/busca-nome-placa.js"></script>
+</html>

@@ -74,11 +74,17 @@ a {
 
 .danger {
     color: #c01919;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .fa-arrow-circle-left {
     padding-right: 20px;
 }
+
+input.valid-input {
+    border: 1px solid #2fcf1a;
+}   
 
 input.invalid-input {
     border: 1px solid #cf1a1a;

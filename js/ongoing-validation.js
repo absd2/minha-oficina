@@ -25,15 +25,19 @@ for(let i of allInputs) {
             }
         }
 
-        // Updates submit button.
+        // Checks how many filled inputs.
+        let filledInputs=0;
+        for(let j of allInputs) {
+            if(j.value !== '') {
+                filledInputs++;
+            }
+        }
+
+        // Updates submit button if all inputs were filled and there's no invalid filled input.
         if(invalidInputs>0) {
             submitButton.disabled = true;
             alertText.style.display = 'block';
-        }else if(invalidInputs<0){
-            invalidInputs=0;
-            submitButton.disabled = false;
-            alertText.style.display = 'none';
-        } else{
+        }else if(filledInputs===18){
             submitButton.disabled = false;
             alertText.style.display = 'none';
         }

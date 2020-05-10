@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-const SERVER_URL = 'http://localhost:8080';
+const SERVER_URL = 'http://localhost:8080/cadastro';
 
 form.addEventListener("submit", e => {
     e.preventDefault();
@@ -33,11 +33,17 @@ form.addEventListener("submit", e => {
 
     fetch(SERVER_URL, {
         method: 'POST',
-        body: JSON.stringify(usuarioParaCadastrar)
+        body: JSON.stringify(usuarioParaCadastrar),
+        headers: {
+            'Content-Type': 'application/json'
+        }
     }).then(response => {
         return response.json();
     }).then(responseData => {
-        console.log(responseData);
+        if(responseData.status == '200') {
+            console.log('Cadastro realizado com sucesso');
+        }else{
+            console.log('Cadastro não realizado');
+        }
     });
-
 });

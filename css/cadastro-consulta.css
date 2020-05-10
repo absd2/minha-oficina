@@ -28,9 +28,23 @@ select {
 
 p {
     float: none;
-    font-size: 14px;
-    font-weight: 500;
     position: relative;
     top: 10px;
     display: none;
+}
+
+td {
+    font-family: sans-serif;
+}
+
+#cpf-not-found-alert {
+    position: relative;
+    bottom: 15px;
+    visibility: hidden;
+}
+
+#placa-not-found-alert {
+    position: relative;
+    bottom: 15px;
+    visibility: hidden;
 }

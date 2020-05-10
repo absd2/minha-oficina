@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Consulta de Serviços | minhaOficina</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro-consulta.css">
+
+    <script src="https://kit.fontawesome.com/69e2b2839c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <span id="header-title"><a href="index.html"><i class="fas fa-arrow-circle-left"></i></a> <i
+                class="fas fa-car"></i> &nbsp;<span class="thin">minha</span>Oficina</span>
+    </header>
+
+    <div class="container">
+        <form id="form">
+            <div class="row">
+                <div class="twelve columns">
+                    <h1>Consulta de Serviços</h1>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="twelve columns">
+                    <h2>Buscar por</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="three columns">
+                    <select id="tipoConsultaInput" autofocus>
+                        <option value="osPorCPF">CPF do Cliente</option>
+                        <option value="osPorID">Ordem de Serviço</option>
+                    </select>
+                </div>
+
+                <div class="seven columns">
+                    <input type="text" id="valorConsultaInput" placeholder="cpf (SOMENTE NÚMEROS)">
+                </div>
+
+                <div class="two columns">
+                    <input type="submit" class="button-primary" value="Buscar">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <table id="table">
+                <thead>
+                    <th>nº</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="js/consultaServicos.js"></script>
+</html>
